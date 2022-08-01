@@ -1,0 +1,645 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;  
+}
+
+/* header mobile + navegador */
+
+header {
+  /* background-color: blueviolet; */
+  background-image: url(/img/eyes-285825.png);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100px;
+  border: solid black 2px;
+  opacity: 0.9;
+  /* display: flex; */
+  /* justify-content: center; */
+}
+
+.logo {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* padding-left: 13px; */
+}
+
+/* -- menu navegador -- */
+
+/* .barra { */
+   /* padding: 2px; */
+    /* display: flex; */
+    /* font-size: 30px; */
+    /* width: auto; */
+    /* color: rgb(255, 255, 255); */
+    /* text-align: right; */
+    /* flex-direction: column-reverse; */
+/* } */
+/* menu {
+  display: inline-flex;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  justify-content: space-between;
+  color: rgb(255, 255, 255);
+} */
+
+.menu a{
+  outline: none;
+  text-decoration: none;
+  display: inline-flex;
+  width: auto;
+  padding-left: 6px;
+  margin-right: 1.7%;
+  text-align: center;
+  line-height: 2;
+  color: rgb(255, 255, 255);
+}
+
+
+li {
+    display: inline;
+  }
+  
+  
+li:last-child a {
+    margin-right: 0;
+  }
+  
+a:link, a:visited, a:focus {
+    background: rgba(41, 39, 39, 0.119);
+  }
+  
+a:hover {
+    background: rgba(58, 57, 54, 0.422);
+  }
+
+/* -- main con grid y flexbox -- */
+
+ h2{
+    background-color: rgba(0, 0, 0, 0.345);
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 40px;
+    padding: 5px;
+    text-shadow: 0.1em 0.1em 0.2em black
+} 
+
+/* Main */
+
+main {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+}
+
+.call { 
+    width: 20%;
+    padding: 5px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    text-shadow: 0.1em 0.1em 0.2em rgb(0, 0, 0);
+    color: bisque;
+    /* align-self: center; */
+    /* text-align: center; */
+    /* background-color: rgba(78, 76, 76, 0.459); */
+    /* border: solid 2px rgb(0, 0, 0); */
+}
+
+  .container { 
+    height: 500px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "img1 "
+   }
+  
+.img {
+    border: solid black 2px;
+}
+
+  .img1 { 
+    background-image: url(/img/sea-164989.jpg);
+    background-size: cover;
+    background-position: center;
+    grid-area: img1; 
+}
+  
+  /* .img2 { 
+    background-image: url(/img/cat-300572_1920.jpg);
+    background-size:cover;
+    background-position: center;
+    grid-area: img2; 
+}
+  
+  .img3 { 
+    background-image: url(/img/kitten-4611189_1920.jpg);
+    background-size: cover;
+    background-position: center;
+    grid-area: img3; 
+} */
+
+
+/* Galeria de imagenes */
+
+h2 {
+  background-color: grey;
+  text-align: center;
+  font-size: 30px;
+  padding: 5px;
+}
+
+.galeria{
+  background-color: grey;
+  height: auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(8, 200px);
+  padding: 10px;
+  grid-gap: 10px;
+}
+
+.item {
+  border-radius: 5px;
+  border: solid black 5px;
+  filter: grayscale(100%);
+  transition: all 0.7s;
+}
+
+.item:hover {
+  transform: scale(1.05);
+  filter: grayscale(0%);
+  transition: all 0.7s;
+}
+
+.item1 {
+  background-image: url(/img/dandelion-445228_1920.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.item2 {
+  background-image: url(/img/garden-19830_1920.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.item3 {
+  background-image: url(/img/lake-1802337_1920.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.item4 {
+  background-image: url(/img/mountains-190055.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.item5 {
+  background-image: url(/img/header.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.item6 {
+  background-image: url(/img/rose-165819_1920.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.item7 {
+  background-image: url(/img/tree-276014_1920.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.item8 {
+  background-image: url(/img/tree-838667_1280.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+
+
+/* inicio de footer */
+  
+footer {
+  /* background-color: rgba(121, 6, 114, 0.416); */
+  background-image: url(/img/footer_lodyas.png);
+  padding: 10px;
+  border: solid black 2px;
+  height: 100px;
+  /* width: 100%; */
+}
+
+h3 {
+  text-align: left;
+  font-size: 25px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+.if {
+  display: inline-flex;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  justify-content: space-between;
+  color: rgb(255, 255, 255);
+}
+
+.if a {
+  color: rgb(0, 0, 0);
+}
+
+
+footer .if i:hover {
+ color: dimgrey;
+}
+
+/* media queries */
+
+/* media 360px */
+
+@media only screen and (min-width: 360px) {
+  .logo {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* padding-left: 600px; */
+}
+
+.menu {
+  /* display: inline-flex; */
+  width: 100%;
+  /* text-align: center; */
+  font-size: 15px;
+  justify-content: space-between;
+  color: rgb(255, 255, 255);
+  padding: 5px;
+}
+
+/* .menu a {
+  outline: none;
+    text-decoration: none;
+    display: inline-flex;
+    width: auto;
+    padding-left: 6px;
+    margin-right: 1.7%;
+    text-align: center;
+    line-height: 2;
+    color: rgb(255, 255, 255);
+} */
+
+  .galeria {
+      grid-template-columns: 1fr 1fr;
+  }
+  .galeria {
+    background-color: grey;
+    height: 845px;
+    width: 100%;
+    display: grid;
+    padding: 10px;
+    gap: 10px;
+}
+}
+
+/* media 600px a 768px */
+
+@media only screen and (min-width: 600px) and (max-width:768px) {
+
+  .logo {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* padding-left: 600px; */
+}
+
+.menu {
+  /* display: inline-flex; */
+  width: 100%;
+  text-align: center;
+  font-size: 17px;
+  justify-content: space-between;
+  color: rgb(255, 255, 255);
+  padding: 5px;
+}
+
+.galeria {
+      grid-template-columns: repeat(3, 1fr);
+  }
+  .item1 {
+      grid-column: 1/3;
+      grid-row: 1/2;
+  }
+  .item2 {
+      grid-column: 3/4;
+      grid-row: 1/2;
+  }
+  .item3 {
+      grid-column: 1/2;
+      grid-row: 2/3;
+  }
+  .item4 {
+      grid-column: 2/4;
+      grid-row: 2/3;
+  }
+  .item5 {
+      grid-column: 1/3;
+      grid-row: 3/4;
+  }
+  .item6 {
+      grid-column: 3/4;
+      grid-row: 3/4;
+  }
+  .item7 {
+      grid-column: 1/2;
+      grid-row: 4/5;
+  }
+  .item8 {
+      grid-column: 2/4;
+      grid-row: 4/5;
+  }
+}
+
+/* media 768 en adelante */
+
+@media only screen and (min-width:768px) {
+
+  header {
+    /* background-color: blueviolet; */
+    background-image: url(/img/eyes-285825.png);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 120px;
+    border: solid black 2px;
+    opacity: 0.9;
+}
+
+.logo {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* padding-left: 600px; */
+}
+
+/* -- menu navegador -- */
+  
+li {
+    display: inline;
+  }
+  
+  .menu a{
+    outline: none;
+    text-decoration: none;
+    display: inline-flex;
+    width: 15%;
+    /* padding-left: 30px; */
+    margin-right: 1.7%;
+    text-align: center;
+    justify-content: center;
+    line-height: 3;
+    color: rgb(255, 255, 255);
+}
+  
+li:last-child a {
+    margin-right: 0;
+  }
+  
+a:link, a:visited, a:focus {
+    background: rgba(41, 39, 39, 0.119);
+  }
+  
+a:hover {
+    background: rgba(58, 57, 54, 0.422);
+  }
+  
+  /* Main */
+  
+  main {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items:flex-start;
+  }
+  
+  .call { 
+      width: 20%;
+      padding: 5px;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      text-shadow: 0.1em 0.1em 0.2em rgb(0, 0, 0);
+      color: bisque;
+      /* align-self: center; */
+      /* text-align: center; */
+      /* background-color: rgba(78, 76, 76, 0.459); */
+      /* border: solid 2px rgb(0, 0, 0); */
+  }
+  
+    .container { 
+      height: 500px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas:
+        "img1 "
+     }
+    
+  .img {
+      border: solid black 2px;
+  }
+  
+    .img1 { 
+      background-image: url(/img/sea-164989.jpg);
+      background-size: cover;
+      background-position: center;
+      grid-area: img1; 
+  }
+    
+    /* .img2 { 
+      background-image: url(/img/cat-300572_1920.jpg);
+      background-size:cover;
+      background-position: center;
+      grid-area: img2; 
+  }
+    
+    .img3 { 
+      background-image: url(/img/kitten-4611189_1920.jpg);
+      background-size: cover;
+      background-position: center;
+      grid-area: img3; 
+  } */
+  
+  
+  /* Galeria de imagenes */
+  
+  h2 {
+    background-color: grey;
+    text-align: center;
+    font-size: 30px;
+    padding: 5px;
+  }
+  
+  .galeria{
+    background-color: grey;
+    height: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(8, 200px);
+    padding: 10px;
+    grid-gap: 10px;
+  }
+  
+  .item {
+    border-radius: 5px;
+    border: solid black 5px;
+    filter: grayscale(100%);
+    transition: all 0.7s;
+  }
+  
+  .item:hover {
+    transform: scale(1.05);
+    filter: grayscale(0%);
+    transition: all 0.7s;
+  }
+  
+  .item1 {
+    background-image: url(/img/dandelion-445228_1920.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .item2 {
+    background-image: url(/img/garden-19830_1920.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .item3 {
+    background-image: url(/img/lake-1802337_1920.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .item4 {
+    background-image: url(/img/mountains-190055.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .item5 {
+    background-image: url(/img/header.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .item6 {
+    background-image: url(/img/rose-165819_1920.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .item7 {
+    background-image: url(/img/tree-276014_1920.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .item8 {
+    background-image: url(/img/tree-838667_1280.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  
+  
+  
+  /* inicio de footer */
+    
+  footer {
+    /* background-color: rgba(121, 6, 114, 0.416); */
+    background-image: url(/img/footer_lodyas.png);
+    padding: 10px;
+    border: solid black 2px;
+    height: 100px;
+    /* width: 100%; */
+  }
+  
+  h3 {
+    text-align: left;
+    font-size: 25px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    padding-left: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .if {
+    display: inline-flex;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    justify-content: space-between;
+    color: rgb(255, 255, 255);
+  }
+  
+  .if a {
+    color: rgb(0, 0, 0);
+  }
+  
+  
+  footer .if i:hover {
+   color: dimgrey;
+  }
+  
+
+
+  .galeria {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 200px);
+      grid-template-areas: 
+      "img1 img2 img3 img3"
+      "img1 img4 img5 img6"
+      "img7 img4 img8 img8";
+  }
+  .item1 {
+      grid-area: img1;
+  }
+  .item2 {
+      grid-area: img2;
+  }
+  .item3 {
+      grid-area: img3;
+  }
+  .item4 {
+      grid-area: img4;
+  }
+  .item5 {
+      grid-area: img5;
+  }
+  .item6 {
+      grid-area: img6;
+  }
+  .item7 {
+      grid-area: img7;
+  }
+  .item8 {
+      grid-area: img8;
+  }
+}
