@@ -10,32 +10,95 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="estilosI.css">
     <title>DesafioGrids</title>
+    <style>
+        /* imagen full responsive */
+        .carousel-inner img {
+          width: 100%;
+          height: 100%;
+        }
+        </style>
 </head>
 <body>
     <header>
-        <nav>
-            <!-- <div class="barra"><a href="#"><i class="fa-solid fa-bars"></i></a></div> -->
-            <h1 class="logo">LOGO</h1>
-            
-		        <ul class="menu">
-			        <li><a href="index.html">Inicio</a></li>
-			        <li><a href="/productos.html">Productos</a></li>
-			        <li><a href="/servicio.html">Servicio</a></li>
-			        <li><a href="/imagenes.html">Imagenes</a></li>
-			        <li><a href="/sobremi.html">Sobre mi</a></li>
-			        <li><a href="https://www.google.com" target="_blank">Ir a google</a></li>
-		        </ul>     
-	    </nav>
+        <div class="menu" data-aos="zoom-in-right">
+            <nav class="navbar navbar-expand-md navbar-dark navbar-center">
+                <!-- Brand -->
+                
+                <h1 class=" logo navbar-brand">LOGO</h1> 
+
+                <!-- Toggler/collapsibe Button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <!-- Navbar links -->
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="/index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/servicio.html">Servicio</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/imagenes.html">Imagenes</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/sobremi.html">Sobre Mi</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+        </div>
     </header>
     <main>
-        <div class="call">
+        <div class="call" data-aos="zoom-in-right">
             <h1>Imagenes</h1>
         </div>
-        <div class="container">
-                <div class="img1 img"></div>
+    <div id="demo" class="carousel slide" data-ride="carousel">
+
+        <!-- Indicadores -->
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+          <li data-target="#demo" data-slide-to="3"></li>
+          <li data-target="#demo" data-slide-to="4"></li>
+        </ul>
+        
+        <!-- imagenes -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/img/tree-276014_1920.jpg" alt="arbol" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="/img/tree-276014_1920.jpg" alt="arbol2" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="/img/tree-276014_1920.jpg" alt="arbol3" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="/img/tree-276014_1920.jpg" alt="arbol3" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="/img/tree-276014_1920.jpg" alt="arbol3" width="1100" height="500">
+          </div>
         </div>
-    </main>
-    <h2>Galeria</h2>
+        
+        <!-- controles -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+      </main>
+
+    <!-- <h2>Galeria</h2>
     <section class="galeria">
         <div class="item item1"></div>
         <div class="item item2"></div>
@@ -45,7 +108,7 @@
         <div class="item item6"></div>
         <div class="item item7"></div>
         <div class="item item8"></div>
-    </section>
+    </section> -->
     <footer>
 		<h3>LOGO</h3>
 		<div class="if">
