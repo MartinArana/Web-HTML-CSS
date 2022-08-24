@@ -17,7 +17,6 @@ $font3: "Quicksand", sans-serif;
 /* header mobile + navegador */
 
 header {
-  /* background-color: blueviolet; */
   background-image: url(/img/eyes-285825.png);
   background-position: center;
   background-size: cover;
@@ -175,25 +174,24 @@ footer {
     .img {
       border: solid black 2px;
     }
-  
+
     .img1 {
       background-image: url(/img/cat-1940487_1920.jpg);
       background-size: cover;
       background-position: center;
     }
-  
+
     .img2 {
       background-image: url(/img/cat-300572_1920.jpg);
       background-size: cover;
       background-position: center;
     }
-  
+
     .img3 {
       background-image: url(/img/kitten-4611189_1920.jpg);
       background-size: cover;
       background-position: center;
     }
-
   }
 
   /* media 600px a 768px */
@@ -226,32 +224,29 @@ footer {
     padding: 10px;
     grid-gap: 10px;
 
-
     .img {
       border: solid black 2px;
     }
-  
+
     .img1 {
       background-image: url(/img/cat-1940487_1920.jpg);
       background-size: cover;
       background-position: center;
     }
-  
+
     .img2 {
       background-image: url(/img/cat-300572_1920.jpg);
       background-size: cover;
       background-position: center;
     }
-  
+
     .img3 {
       background-image: url(/img/kitten-4611189_1920.jpg);
       background-size: cover;
       background-position: center;
     }
   }
-
-  }
-
+}
 
 /* media 768 en adelante */
 
@@ -265,16 +260,13 @@ footer {
     border: solid black 2px;
     opacity: 0.9;
 
-
     .logo {
       text-align: left;
       color: $color2;
       font-size: 40px;
       font-family: $font3;
     }
-
   }
-
 
   /* -- menu navegador -- */
 
@@ -331,7 +323,6 @@ footer {
     justify-content: center;
     align-items: flex-start;
 
-
     .call {
       width: 20%;
       padding: 5px;
@@ -342,9 +333,7 @@ footer {
       font-family: $font3;
       color: $color2;
     }
-
   }
-
 
   .container-fluid {
     background-color: $color1;
@@ -359,26 +348,23 @@ footer {
     .img {
       border: solid black 2px;
     }
-  
+
     .img1 {
       background-image: url(/img/cat-1940487_1920.jpg);
       background-size: cover;
       background-position: center;
     }
-  
+
     .img2 {
       background-image: url(/img/cat-300572_1920.jpg);
       background-size: cover;
       background-position: center;
     }
-  
+
     .img3 {
       background-image: url(/img/kitten-4611189_1920.jpg);
       background-size: cover;
       background-position: center;
     }
   }
-  
-
-  }
-
+}
