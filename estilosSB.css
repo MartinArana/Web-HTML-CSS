@@ -88,7 +88,7 @@ main .mensaje2 {
   border: solid rgba(0, 0, 0, 0.29) 1px;
 }
 .container-fluid .img1 {
-  background-image: url(/img/tree-736885.jpg);
+  background-image: url(img/tree-736885.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -253,7 +253,7 @@ footer {
   }
 
   .container-fluid .img1 {
-    background-image: url(/img/tree-736885.jpg);
+    background-image: url(img/tree-736885.jpg);
     background-size: cover;
     background-position: center;
   }
@@ -307,7 +307,7 @@ footer {
     border: solid black 2px;
   }
   .container-fluid .img1 {
-    background-image: url(/img/tree-736885.jpg);
+    background-image: url(img/tree-736885.jpg);
     background-size: cover;
     background-position: center;
   }
@@ -379,7 +379,7 @@ footer {
     border: solid black 2px;
   }
   .container-fluid .img1 {
-    background-image: url(/img/tree-736885.jpg);
+    background-image: url(img/tree-736885.jpg);
     background-size: cover;
     background-position: center;
   }

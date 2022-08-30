@@ -88,7 +88,7 @@ main .mensaje2 {
 }
 
 .img1 {
-  background-image: url(/img/lake-1802337_1920.jpg);
+  background-image: url(img/lake-1802337_1920.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -194,7 +194,7 @@ footer {
   }
 
   .img1 {
-    background-image: url(/img/lake-1802337_1920.jpg);
+    background-image: url(img/lake-1802337_1920.jpg);
     background-size: cover;
     background-position: center;
   }
@@ -234,7 +234,7 @@ footer {
   }
 
   .img1 {
-    background-image: url(/img/lake-1802337_1920.jpg);
+    background-image: url(img/lake-1802337_1920.jpg);
     background-size: cover;
     background-position: center;
   }
@@ -309,7 +309,7 @@ footer {
     }
 
     .img1 {
-      background-image: url(/img/lake-1802337_1920.jpg);
+      background-image: url(img/lake-1802337_1920.jpg);
       background-size: cover;
       background-position: center;
     }
