@@ -10,17 +10,27 @@
 
 /* header mobile + navegador */
 header {
-  background-image: url(/img/eyes-285825.png);
-  background-position: center;
-  background-size: cover;
+  background-color: rgb(250, 217, 230);
   width: 100%;
   height: 100px;
   font-family: "Quicksand", sans-serif;
   opacity: 0.9;
 }
+
+.navbar-logo {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100px;
+}
+
+.navbar-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 header .logo {
   text-align: center;
-  color: rgb(255, 255, 255);
   font-size: 30px;
   font-family: "Quicksand", sans-serif;
 }
@@ -29,54 +39,42 @@ header li {
   display: inline;
 }
 header li:last-child a {
-  font-size: "Quicksand", sans-serif;
+  font-family: "Quicksand", sans-serif;
   margin-right: 0;
-}
-header a:link,
-header a:visited,
-header a:focus {
-  background: rgba(41, 39, 39, 0.119);
-}
-header a:hover {
-  background: rgba(58, 57, 54, 0.422);
-}
-
-/* -- main con grid y flexbox -- */
-h2 {
-  text-transform: capitalize;
-  text-align: center;
-  font-size: 25px;
-  padding: 5px;
-  text-shadow: 0.1em 0.1em 0.2em black;
 }
 
 /* Main */
 main {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Quicksand", sans-serif;
   display: flex;
   justify-content: center;
   align-items: flex-start;
 }
-main .call {
-  padding: 5px;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  text-shadow: 0.1em 0.1em 0.2em rgb(0, 0, 0);
-  color: red;
-}
+
 main .mensaje {
   color: rgb(255, 255, 255);
   text-shadow: 1px 1px 5px black;
   position: absolute;
   display: flex;
-  padding: 50px;
+  padding: 20px;
   justify-content: center;
   font-family: cursive;
+  font-size: 30px;
+}
+
+main .mensaje2 {
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 5px black;
+  position: absolute;
+  display: flex;
+  padding: 100px;
+  justify-content: center;
+  font-family: cursive;
+  font-size: 20px;
 }
 
 .container-fluid {
-  background-color: grey;
+  background-color: rgb(228, 174, 197);
   height: auto;
   width: 100%;
   display: grid;
@@ -85,8 +83,9 @@ main .mensaje {
   padding: 10px;
   grid-gap: 10px;
 }
-.container-fluid .img {
-  border: solid black 2px;
+
+.img {
+  border: solid rgba(0, 0, 0, 0.29) 1px;
 }
 .container-fluid .img1 {
   background-image: url(/img/tree-736885.jpg);
@@ -95,7 +94,9 @@ main .mensaje {
 }
 
 /* Botones */
-.cls-btn-danger, .cls-btn-success, .cls-btn-primary {
+.cls-btn-danger,
+.cls-btn-success,
+.cls-btn-primary {
   height: 40px;
   min-width: 100px;
   border: none;
@@ -154,58 +155,103 @@ main .mensaje {
 
 /* inicio de footer */
 footer {
-  background-image: url(/img/footer_lodyas.png);
-  padding: 10px;
-  height: 100px;
-}
-footer h3 {
-  text-align: left;
-  font-size: 25px;
-  font-family: "Quicksand", sans-serif;
-  padding-left: 10px;
-}
-footer .if {
-  display: inline-flex;
   width: 100%;
-  text-align: center;
-  font-size: 30px;
+  background-color: rgb(226, 194, 185);
+  padding: 5px 0px;
+}
+
+.container_footer {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  color: red;
+  max-width: 1200px;
+  margin: auto;
 }
-footer .if a {
-  color: rgb(0, 0, 0);
+
+.box_footer {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
 }
-footer footer .if i:hover {
-  color: dimgrey;
+
+.box_footer .logo img {
+  width: 80px;
+}
+
+.box_footer .terms {
+  max-width: 350px;
+  margin-top: 20px;
+  font-weight: 500;
+  color: #7a7a7a;
+  font-size: 18px;
+}
+
+.box_footer h2 {
+  margin-bottom: 30px;
+  color: #343434;
+  font-weight: 700;
+}
+
+.box_footer a {
+  margin-top: 10px;
+  color: #7a7a7a;
+  font-weight: 600;
+}
+
+.box_footer a:hover {
+  opacity: 0.8;
+}
+
+.box_footer a .fab {
+  font-size: 20px;
+}
+
+.box_copy {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  padding: 0px 40px;
+}
+
+.box_copy p {
+  margin-top: 20px;
+  color: #7a7a7a;
+}
+
+.box_copy hr {
+  border: none;
+  height: 1px;
+  background-color: #7a7a7a;
 }
 
 @media only screen and (min-width: 360px) {
   .logo {
     text-align: center;
-    color: rgb(255, 255, 255);
     font-size: 30px;
-    font-family: "Quicksand", sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
+
   .menu {
     width: 100%;
     font-size: 15px;
     justify-content: space-between;
-    color: rgb(255, 255, 255);
+    color: white;
     padding: 5px;
   }
   .container-fluid {
-    background-color: grey;
+    background-color: rgb(228, 174, 197);
     height: auto;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(1, 200px);
+    grid-template-rows: repeat(3, 200px);
     padding: 10px;
     grid-gap: 10px;
   }
   .container-fluid .img {
-    border: solid black 2px;
+    border: solid rgba(0, 0, 0, 0.24) 1px;
   }
+
   .container-fluid .img1 {
     background-image: url(/img/tree-736885.jpg);
     background-size: cover;
@@ -217,7 +263,7 @@ footer footer .if i:hover {
 @media only screen and (min-width: 360px) and (min-width: 600px) and (max-width: 768px) {
   .logo {
     text-align: center;
-    color: rgb(255, 255, 255);
+    color: red;
     font-size: 30px;
     font-family: "Quicksand", sans-serif;
   }
@@ -230,9 +276,25 @@ footer footer .if i:hover {
     padding: 5px;
   }
 }
+
+.container-fluid {
+  background-color: rgb(228, 174, 197);
+  height: auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 200px);
+  padding: 10px;
+  grid-gap: 10px;
+}
+
+.container-fluid .img {
+  border: solid rgba(0, 0, 0, 0.203) 1px;
+}
+
 @media only screen and (min-width: 360px) {
   .container-fluid {
-    background-color: grey;
+    background-color: rgb(228, 174, 197);
     height: auto;
     width: 100%;
     display: grid;
@@ -252,21 +314,18 @@ footer footer .if i:hover {
 }
 @media only screen and (min-width: 360px) and (min-width: 768px) {
   header {
-    background-image: url(/img/eyes-285825.png);
-    background-position: center;
-    background-size: cover;
+    background-color: rgb(250, 217, 230);
     width: 100%;
-    height: 120px;
-    border: solid black 2px;
+    height: 130px;
     opacity: 0.9;
   }
-  .logo {
+  header .logo {
     text-align: left;
-    color: red;
     font-size: 40px;
     font-family: "Quicksand", sans-serif;
   }
   /* -- menu navegador -- */
+
   .navbar-center {
     position: absolute;
     left: 44%;
@@ -290,38 +349,23 @@ footer footer .if i:hover {
     display: inline-flex;
     text-align: center;
     justify-content: center;
-    color: rgb(255, 255, 255);
+    color: #14508f;
   }
   li:last-child a {
     margin-right: 0;
   }
-  a:link,
-a:visited,
-a:focus {
-    background: rgba(41, 39, 39, 0.119);
-  }
-  a:hover {
-    background: rgba(58, 57, 54, 0.422);
-  }
+
   /* Main */
+
   main {
     font-family: "Quicksand", sans-serif;
     display: flex;
     justify-content: center;
     align-items: flex-start;
   }
-  main .call {
-    width: 20%;
-    padding: 5px;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    text-shadow: 0.1em 0.1em 0.2em rgb(0, 0, 0);
-    font-family: "Quicksand", sans-serif;
-    color: red;
-  }
+
   .container-fluid {
-    background-color: grey;
+    background-color: rgb(228, 174, 197);
     height: auto;
     width: 100%;
     display: grid;
@@ -330,7 +374,8 @@ a:focus {
     padding: 10px;
     grid-gap: 10px;
   }
-  .container-fluid .img {
+
+  .img {
     border: solid black 2px;
   }
   .container-fluid .img1 {
@@ -338,4 +383,4 @@ a:focus {
     background-size: cover;
     background-position: center;
   }
-}/*# sourceMappingURL=estilosSB.css.map */
+} /*# sourceMappingURL=estilosSB.css.map */

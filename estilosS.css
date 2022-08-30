@@ -1,89 +1,79 @@
-*{
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  text-decoration: none;  
+  text-decoration: none;
 }
 
 /* header mobile + navegador */
-
 header {
-/* background-color: blueviolet; */
-background-image: url(/img/eyes-285825.png);
-background-position: center;
-background-size: cover;
-width: 100%;
-height: 100px;
-/* border: solid black 2px; */
-opacity: 0.9;
-/* display: flex; */
-/* justify-content: center; */
+  background-color: rgb(250, 217, 230);
+  width: 100%;
+  height: 100px;
+  font-family: "Quicksand", sans-serif;
+  opacity: 0.9;
 }
 
-.logo {
-text-align: center;
-color: rgb(255, 255, 255);
-font-size: 30px;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
-/* padding-left: 13px; */
+.navbar-logo {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100px;
 }
 
-/* -- menu navegador -- */
+.navbar-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 
-
-li {
+header .logo {
+  text-align: center;
+  font-size: 30px;
+  font-family: "Quicksand", sans-serif;
+}
+header li {
+  font-family: "Quicksand", sans-serif;
   display: inline;
 }
-
-
-li:last-child a {
+header li:last-child a {
+  font-family: "Quicksand", sans-serif;
   margin-right: 0;
 }
-
-a:link, a:visited, a:focus {
-  background: rgba(41, 39, 39, 0.119);
-}
-
-a:hover {
-  background: rgba(58, 57, 54, 0.422);
-}
-
-/* -- main con grid y flexbox -- */
-
-h2{
-    /* background-color: rgba(0, 0, 0, 0.345); */
-    text-transform: capitalize;
-    text-align: center;
-    font-size: 25px;
-    padding: 5px;
-    text-shadow: 0.1em 0.1em 0.2em black;
-} 
 
 /* Main */
 
 main {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Quicksand", sans-serif;
   display: flex;
   justify-content: center;
-  align-items:flex-start;
+  align-items: flex-start;
 }
 
-.call { 
-  /* width: 20%; */
-  padding: 5px;
+main .mensaje {
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 5px black;
   position: absolute;
   display: flex;
+  padding: 20px;
   justify-content: center;
-  text-shadow: 0.1em 0.1em 0.2em rgb(0, 0, 0);
-  color: bisque;
-  /* align-self: center; */
-  /* text-align: center; */
-  /* background-color: rgba(78, 76, 76, 0.459); */
-  /* border: solid 2px rgb(0, 0, 0); */
+  font-family: cursive;
+  font-size: 30px;
 }
 
-.container-fluid{
-  background-color: grey;
+main .mensaje2 {
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 5px black;
+  position: absolute;
+  display: flex;
+  padding: 100px;
+  justify-content: center;
+  font-family: cursive;
+  font-size: 20px;
+}
+
+.container-fluid {
+  background-color: rgb(228, 174, 197);
   height: auto;
   width: 100%;
   display: grid;
@@ -94,115 +84,142 @@ main {
 }
 
 .img {
-  border: solid black 2px;
+  border: solid rgba(0, 0, 0, 0.29) 1px;
 }
 
-.img1 { 
-  background-image: url(/img/mountains-190055.jpg);
+.img1 {
+  background-image: url(/img/dandelion-445228_1920.jpg);
   background-size: cover;
   background-position: center;
 }
 
 /* inicio de footer */
-  
+
 footer {
-  /* background-color: rgba(121, 6, 114, 0.416); */
-  background-image: url(/img/footer_lodyas.png);
-  padding: 10px;
-  /* border: solid black 2px; */
-  height: 100px;
-  /* width: 100%; */
-}
-
-h3 {
-  text-align: left;
-  font-size: 25px;
-  font-family:Georgia, 'Times New Roman', Times, serif;
-  padding-left: 10px;
-}
-
-.if {
-  display: inline-flex;
   width: 100%;
-  text-align: center;
-  font-size: 30px;
+  background-color: rgb(226, 194, 185);
+  padding: 5px 0px;
+}
+
+.container_footer {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  color: rgb(255, 255, 255);
+  max-width: 1200px;
+  margin: auto;
 }
 
-.if a {
-  color: rgb(0, 0, 0);
+.box_footer {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
 }
 
+.box_footer .logo img {
+  width: 80px;
+}
 
-footer .if i:hover {
- color: dimgrey;
+.box_footer .terms {
+  max-width: 350px;
+  margin-top: 20px;
+  font-weight: 500;
+  color: #7a7a7a;
+  font-size: 18px;
+}
+
+.box_footer h2 {
+  margin-bottom: 30px;
+  color: #343434;
+  font-weight: 700;
+}
+
+.box_footer a {
+  margin-top: 10px;
+  color: #7a7a7a;
+  font-weight: 600;
+}
+
+.box_footer a:hover {
+  opacity: 0.8;
+}
+
+.box_footer a .fab {
+  font-size: 20px;
+}
+
+.box_copy {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  padding: 0px 40px;
+}
+
+.box_copy p {
+  margin-top: 20px;
+  color: #7a7a7a;
+}
+
+.box_copy hr {
+  border: none;
+  height: 1px;
+  background-color: #7a7a7a;
 }
 
 @media only screen and (min-width: 360px) {
   .logo {
     text-align: center;
-    color: rgb(255, 255, 255);
     font-size: 30px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    /* padding-left: 600px; */
-}
+  }
 
-.menu {
-  /* display: inline-flex; */
-  width: 100%;
-  /* text-align: center; */
-  font-size: 15px;
-  justify-content: space-between;
-  color: rgb(255, 255, 255);
-  padding: 5px;
-}
-.container-fluid{
-  background-color: grey;
-  height: auto;
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(1, 200px);
-  padding: 10px;
-  grid-gap: 10px;
-}
+  .menu {
+    width: 100%;
+    font-size: 15px;
+    justify-content: space-between;
+    color: white;
+    padding: 5px;
+  }
+  .container-fluid {
+    background-color: rgb(228, 174, 197);
+    height: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 200px);
+    padding: 10px;
+    grid-gap: 10px;
+  }
+  .container-fluid .img {
+    border: solid rgba(0, 0, 0, 0.24) 1px;
+  }
 
-.img {
-  border: solid black 2px;
-}
+  .img1 {
+    background-image: url(/img/dandelion-445228_1920.jpg);
+    background-size: cover;
+    background-position: center;
+  }
 
-.img1 { 
-  background-image: url(/img/mountains-190055.jpg);
-  background-size: cover;
-  background-position: center;
-}
+  /* media 600px a 768px */
 
-/* media 600px a 768px */
+  @media only screen and (min-width: 360px) and (min-width: 600px) and (max-width: 768px) {
+    .logo {
+      text-align: center;
+      color: red;
+      font-size: 30px;
+      font-family: "Quicksand", sans-serif;
+    }
+    .menu {
+      width: 100%;
+      text-align: center;
+      font-size: 17px;
+      justify-content: space-between;
+      color: rgb(255, 255, 255);
+      padding: 5px;
+    }
+  }
 
-@media only screen and (min-width: 600px) and (max-width:768px) {
-
-  .logo {
-    text-align: center;
-    color: rgb(255, 255, 255);
-    font-size: 30px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    /* padding-left: 600px; */
-}
-
-.menu {
-  /* display: inline-flex; */
-  width: 100%;
-  text-align: center;
-  font-size: 17px;
-  justify-content: space-between;
-  color: rgb(255, 255, 255);
-  padding: 5px;
-}
-}
-
-.container-fluid{
-    background-color: grey;
+  .container-fluid {
+    background-color: rgb(228, 174, 197);
     height: auto;
     width: 100%;
     display: grid;
@@ -210,133 +227,91 @@ footer .if i:hover {
     grid-template-rows: repeat(1, 200px);
     padding: 10px;
     grid-gap: 10px;
-}
+  }
 
-.img {
-  border: solid black 2px;
-}
+  .container-fluid .img {
+    border: solid rgba(0, 0, 0, 0.203) 1px;
+  }
 
-.img1 { 
-  background-image: url(/img/mountains-190055.jpg);
-  background-size: cover;
-  background-position: center;
-}
-
-/* media 768 en adelante */
-
-@media only screen and (min-width:768px) {
-
-  header {
-    /* background-color: blueviolet; */
-    background-image: url(/img/eyes-285825.png);
-    background-position: center;
+  .img1 {
+    background-image: url(/img/dandelion-445228_1920.jpg);
     background-size: cover;
-    width: 100%;
-    height: 120px;
-    border: solid black 2px;
-    opacity: 0.9;
-}
-
-
-.logo {
-    text-align: left;
-    color: rgb(255, 255, 255);
-    font-size: 40px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    /* padding-left: 600px; */
-}
-
-/* -- menu navegador -- */
-  
-.navbar-center {
-  position: absolute;
-  left: 44%;
-  transform: translatex(-50%);
-  padding: 5px;
-}
-
-.navbar-nav {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding-left: auto;
-  margin-bottom: 0;
-  list-style: none;
-  font-size: 20px;
-}
-
-li {
-    display: inline;
-  }
-  
-    .menu a{
-    outline: none;
-    text-decoration: none;
-    display: inline-flex;
-    /* width: 15%; */
-    /* padding-left: 30px; */
-    /* margin-right: 1.7%; */
-    text-align: center;
-    justify-content: center;
-    /* line-height: 3; */
-    color: rgb(255, 255, 255);
-}
-  
-li:last-child a {
-    margin-right: 0;
-  }
-  
-a:link, a:visited, a:focus {
-    background: rgba(41, 39, 39, 0.119);
-  }
-  
-a:hover {
-    background: rgba(58, 57, 54, 0.422);
-  }
-  
-  /* Main */
-  
-  main {
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items:flex-start;
+    background-position: center;
   }
 
-  .call { 
-      width: 20%;
-      padding: 5px;
+  /* media 768 en adelante */
+
+  @media only screen and (min-width: 768px) {
+    header {
+      background-color: rgb(250, 217, 230);
+      width: 100%;
+      height: 130px;
+      opacity: 0.9;
+    }
+    header .logo {
+      text-align: left;
+      font-size: 40px;
+      font-family: "Quicksand", sans-serif;
+    }
+    /* -- menu navegador -- */
+
+    .navbar-center {
       position: absolute;
+      left: 44%;
+      transform: translatex(-50%);
+      padding: 5px;
+    }
+    .navbar-nav {
+      display: flex;
+      flex-direction: column;
+      padding-left: auto;
+      margin-bottom: 0;
+      list-style: none;
+      font-size: 20px;
+    }
+    li {
+      display: inline;
+    }
+    .menu a {
+      outline: none;
+      text-decoration: none;
+      display: inline-flex;
+      text-align: center;
+      justify-content: center;
+      color: #14508f;
+    }
+    li:last-child a {
+      margin-right: 0;
+    }
+
+    /* Main */
+
+    main {
+      font-family: "Quicksand", sans-serif;
       display: flex;
       justify-content: center;
-      text-shadow: 0.1em 0.1em 0.2em rgb(0, 0, 0);
-      color: bisque;
-      /* align-self: center; */
-      /* text-align: center; */
-      /* background-color: rgba(78, 76, 76, 0.459); */
-      /* border: solid 2px rgb(0, 0, 0); */
+      align-items: flex-start;
+    }
+
+    .container-fluid {
+      background-color: rgb(228, 174, 197);
+      height: auto;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(1, 500px);
+      padding: 10px;
+      grid-gap: 10px;
+    }
+
+    .img {
+      border: solid rgba(0, 0, 0, 0.203) 1px;;
+    }
+
+    .img1 {
+      background-image: url(/img/dandelion-445228_1920.jpg);
+      background-size: cover;
+      background-position: center;
+    }
   }
-  .container-fluid{
-    background-color: grey;
-    height: auto;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(1, 500px);
-    padding: 10px;
-    grid-gap: 10px;
-}
-
-.img {
-  border: solid black 2px;
-}
-
-.img1 { 
-  background-image: url(/img/mountains-190055.jpg);
-  background-size: cover;
-  background-position: center;
-}
-
-}
 }
