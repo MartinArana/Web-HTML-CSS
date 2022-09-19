@@ -133,7 +133,6 @@ main .mensaje {
 
 /* Inicio galeria */
 
-
 .galeria {
   background-color: rgb(250, 217, 230);
   height: auto;
@@ -159,49 +158,49 @@ main .mensaje {
 }
 
 .item1 {
-  background-image: url(/img/plataformas.jpg);
+  background-image: url(img/plataformas.jpg);
   background-position: center;
   background-size: cover;
 }
 
 .item2 {
-  background-image: url(/img/gatoduerme.jpg);
+  background-image: url(img/gatoduerme.jpg);
   background-position: bottom;
   background-size: cover;
 }
 
 .item3 {
-  background-image: url(/img/gatopatio.jpg);
+  background-image: url(img/gatopatio.jpg);
   background-position: center;
   background-size: cover;
 }
 
 .item4 {
-  background-image: url(/img/hotel2.jpg);
+  background-image: url(img/hotel2.jpg);
   background-position: center;
   background-size: cover;
 }
 
 .item5 {
-  background-image: url(/img/hotel_felino.jpg);
+  background-image: url(img/hotel_felino.jpg);
   background-position: center;
   background-size: cover;
 }
 
 .item6 {
-  background-image: url(/img/salagatos.jpg);
+  background-image: url(img/salagatos.jpg);
   background-position: center;
   background-size: cover;
 }
 
 .item7 {
-  background-image: url(/img/hotel_felino2.jpg);
+  background-image: url(img/hotel_felino2.jpg);
   background-position: center;
   background-size: cover;
 }
 
 .item8 {
-  background-image: url(/img/hotel-felino5.jpg);
+  background-image: url(img/hotel-felino5.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -483,7 +482,7 @@ footer {
   }
 }
 /* media 768px */
-@media only screen and (min-width: 768px)  {
+@media only screen and (min-width: 768px) {
   .search input {
     display: block;
   }
@@ -592,37 +591,36 @@ footer {
     font-family: sans-serif;
   }
 
-    .galeria {
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(3, 200px);
-      grid-template-areas:
-        "img1 img2 img3 img3"
-        "img1 img4 img5 img6"
-        "img7 img4 img8 img8";
-    }
-    .item1 {
-      grid-area: img1;
-    }
-    .item2 {
-      grid-area: img2;
-    }
-    .item3 {
-      grid-area: img3;
-    }
-    .item4 {
-      grid-area: img4;
-    }
-    .item5 {
-      grid-area: img5;
-    }
-    .item6 {
-      grid-area: img6;
-    }
-    .item7 {
-      grid-area: img7;
-    }
-    .item8 {
-      grid-area: img8;
-    }
+  .galeria {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 200px);
+    grid-template-areas:
+      "img1 img2 img3 img3"
+      "img1 img4 img5 img6"
+      "img7 img4 img8 img8";
   }
-
+  .item1 {
+    grid-area: img1;
+  }
+  .item2 {
+    grid-area: img2;
+  }
+  .item3 {
+    grid-area: img3;
+  }
+  .item4 {
+    grid-area: img4;
+  }
+  .item5 {
+    grid-area: img5;
+  }
+  .item6 {
+    grid-area: img6;
+  }
+  .item7 {
+    grid-area: img7;
+  }
+  .item8 {
+    grid-area: img8;
+  }
+}
