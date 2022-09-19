@@ -1,155 +1,204 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Servicios MundoFreda con descripcion y fotos de los servicios brindados para los gatos">
-    <meta name="keywords" content="gatos, gato, gata, animales, perros, perro, perra, naturaleza, baños, corte de uñas, paseos">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="shortcut icon" href="/img/animal-1299179_640.png" type="image/x-icon">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link rel="stylesheet" href="estilosS.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Servicios MundoFreda con descripcion y fotos de los servicios brindados para los gatos"
+    />
+    <meta
+      name="keywords"
+      content="gatos, gato, gata, animales, perros, perro, perra, naturaleza, baños, corte de uñas, paseos"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="shortcut icon"
+      href="/img/animal-1299179_640.png"
+      type="image/x-icon"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="estilosS.css" />
     <title>MundoFreda - Servicio</title>
-</head>
-<body>
-  <header>
-    <!-- inicio navbar -->
-
-    <div class="menu" data-aos="zoom-in">
-      <nav class="navbar navbar-expand-md navbar-light navbar-center">
-        <!-- Brand -->
-
-        <div class="logo navbar-brand">
-          <a class="navbar-logo" href="#">
-            <img src="img/Logofreda.png" alt="LOGO" />
-          </a>
-        </div>
-
-        <!-- Toggler/collapsibe Button -->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#collapsibleNavbar"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Navbar links -->
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="productos.html">Productos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="servicio.html">Servicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="imagenes.html">Imagenes</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="sobremi.html">Sobre Mi</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-
-    <!-- fin navbar -->
-  </header>
-
-  <!-- inicio main -->
-
-  <main>
-    <p
-      class="mensaje"
-      data-aos="fade-right"
-      data-aos-offset="300"
-      data-aos-easing="ease-in-sine"
-    >
-      NUESTROS SERVICIOS
-    </p>
-    <p
-      class="mensaje2"
-      data-aos="fade-right"
-      data-aos-offset="300"
-      data-aos-easing="ease-in-sine"
-    >
-      En esta pagina vas a encontrar los mejores servicios para tus amigos
-      felinos.
-      <br />
-    </p>
-    <div class="container-fluid">
-      <div class="img1 img"></div>
-    </div>
-  </main>
-
-  <!-- fin main -->
-
-  <!-- inicio footer -->
-
-  <footer>
-    <div class="container_footer">
-      <div class="box_footer">
-        <div class="logo">
+  </head>
+  <body>
+    <header>
+      <!-- inicia  navbar -->
+      <div class="header__superior">
+        <div class="logo1">
           <img src="img/Logofreda.png" alt="LOGO" />
         </div>
-        <div class="terms">
+        <div class="search">
+          <input type="search" placeholder="Que buscas?" />
         </div>
       </div>
-      <div class="box_footer">
-        <h2>NOSOTROS</h2>
-        <a href="#">Quienes somos?</a>
-        <a href="#">Nuestras sucursales</a>
-        <a href="#">Trabaja con nosotros</a>
-        <a href="#">Contacto</a>
+      <div class="container__menu">
+        <div class="menu">
+          <input type="checkbox" id="check__menu" />
+          <label id="label__check" for="check__menu">
+            <i class="fa-solid fa-bars icon__menu"></i>
+          </label>
+          <nav>
+            <ul>
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="productos.html">Productos</a></li>
+              <li><a href="servicio.html">Servicios</a></li>
+              <li><a href="imagenes.html">Imagenes</a></li>
+              <li><a href="sobremi.html">Sobre Mi</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
+      <!-- fin  navbar -->
+    </header>
 
-      <div class="box_footer">
-        <h2>INFORMACION</h2>
-        <a href="#">Servicios</a>
-        <a href="#">Delivery</a>
-        <a href="#">Promociones</a>
-        <a href="#">Terminos y condiciones</a>
+    <!-- inicio main -->
+
+    <main>
+      <p
+        class="mensaje"
+        data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+      >
+        SERVICIOS
+      </p>
+    </main>
+
+    <!-- fin main -->
+    <!-- inicio section -->
+    <section>
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+          <div class="card">
+            <img src="/img/gatoauto.jpg" class="card-img-top1" alt="..." />
+            <div class="card-body1">
+              <h5 class="card-title">Traslados
+              </h5>
+              <p class="card-text">
+                Servicios de traslados para gatos sistema puerta a puerta.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="/img/gatotraslado.jpg" class="card-img-top2" alt="..." />
+            <div class="card-body2">
+              <h5 class="card-title">Guarderia</h5>
+              <p class="card-text">
+                Servicio de guarderia. Contamos zonas de diversion y actividades
+                recreativas, aparte de un jardin cerrado para que los gatitos
+                puedan tomar aire fresco y estar al sol.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="/img/gatouñas.jpg" class="card-img-top3" alt="..." />
+            <div class="card-body3">
+              <h5 class="card-title">Corte de uñas</h5>
+              <p class="card-text">
+                Corte de uñas para tus felinos a cargo de nuestros mejores profesionales.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="/img/gatocuidado.jpg" class="card-img-top4" alt="..." />
+            <div class="card-body4">
+              <h5 class="card-title">Salud</h5>
+              <p class="card-text">
+                Servicios de salud, antiparasitarios, medicamentos, pulgas, garrapatas, etc.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
+    <!-- fin section -->
+    <!-- inicio footer -->
 
-      <div class="box_footer">
-        <h2>REDES SOCIALES</h2>
-        <a href="#"><i class="fab fa-brands fa-facebook-square"></i>Facebook</a>
-        <a href="#"><i class="fab fa-brands fa-instagram"></i>Instagram</a>
-        <a href="#"><i class="fab fa-solid fa-envelope"></i>Mensajes</a>
-        <a href="#"><i class="fab fa-solid fa-mobile-button"></i>WhatsApp</a>
+    <footer>
+      <div class="container_footer">
+        <div class="box_footer">
+          <div class="logo">
+            <img src="img/Logofreda.png" alt="LOGO" />
+          </div>
+          <div class="terms"></div>
+        </div>
+        <div class="box_footer">
+          <h2>NOSOTROS</h2>
+          <a href="#">Quienes somos?</a>
+          <a href="#">Nuestras sucursales</a>
+          <a href="#">Trabaja con nosotros</a>
+          <a href="#">Contacto</a>
+        </div>
+
+        <div class="box_footer">
+          <h2>INFORMACION</h2>
+          <a href="#">Servicios</a>
+          <a href="#">Delivery</a>
+          <a href="#">Promociones</a>
+          <a href="#">Terminos y condiciones</a>
+        </div>
+
+        <div class="box_footer">
+          <h2>REDES SOCIALES</h2>
+          <a href="#"
+            ><i class="fab fa-brands fa-facebook-square"></i>Facebook</a
+          >
+          <a href="#"><i class="fab fa-brands fa-instagram"></i>Instagram</a>
+          <a href="#"><i class="fab fa-solid fa-envelope"></i>Mensajes</a>
+          <a href="#"><i class="fab fa-solid fa-mobile-button"></i>WhatsApp</a>
+        </div>
       </div>
-    </div>
-    <div class="box_copy">
-      <hr>
-      <p>Todos los derechos reservados 2022
-      <b>MundoFreda</b></p>
-    </div>
-  </footer>
+      <div class="box_copy">
+        <hr />
+        <p>Todos los derechos reservados 2022 <b>MundoFreda</b></p>
+      </div>
+    </footer>
 
-<!-- fin footer -->
+    <!-- fin footer -->
 
+    <!-- enlace aos -->
 
-<!-- enlace aos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-    AOS.init();
-  </script>
+    <!-- enlace booststrap -->
 
-<!-- enlace booststrap -->
-
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
-
-
-
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+      integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

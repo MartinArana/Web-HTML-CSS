@@ -1,53 +1,125 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   text-decoration: none;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
-/* header mobile + navegador */
+/* header */
+
 header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
   background-color: rgb(250, 217, 230);
+  position: absolute;
+  z-index: 10;
+}
+
+/* Header superior */
+
+.header__superior {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.logo1 img {
+  width: 90px;
+}
+
+.search input {
+  cursor: pointer;
+  width: 300px;
+  padding: 10px;
+}
+
+/* barra menu */
+
+.container__menu {
   width: 100%;
-  height: 100px;
-  font-family: "Quicksand", sans-serif;
-  opacity: 0.9;
+  height: 70px;
+  background-color: rgb(240, 148, 188);
+  padding: 0px 20px;
 }
 
-.navbar-logo {
-  display: inline-block;
-  vertical-align: middle;
-  width: 100px;
+.menu {
+  max-width: 1200px;
+  margin: auto;
+  height: 100%;
 }
 
-.navbar-logo img {
-  display: block;
+nav {
+  height: 100%;
+}
+
+nav ul {
+  height: 100%;
+  display: flex;
+}
+
+nav ul li {
+  height: 100%;
+  list-style: none;
+  position: relative;
+}
+
+nav ul li a {
   width: 100%;
-  height: auto;
+  height: 100%;
+  display: flex;
+  color: white;
+  align-items: center;
+  padding: 14px;
+  text-transform: uppercase;
+  font-size: 14px;
+  transition: all 300ms ease;
 }
 
-header .logo {
-  text-align: center;
-  font-size: 30px;
-  font-family: "Quicksand", sans-serif;
+nav ul li a:hover {
+  text-decoration: none;
+  color: white;
+  transform: scale(1.1);
+  background: rgb(239, 132, 178);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
-header li {
-  font-family: "Quicksand", sans-serif;
-  display: inline;
+
+/* elementos responsive */
+
+.icon__menu {
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+  width: 26px;
+  height: 100%;
+  display: none;
+  align-items: center;
 }
-header li:last-child a {
-  font-family: "Quicksand", sans-serif;
-  margin-right: 0;
+
+#label__check {
+  width: 26px;
+  height: 100%;
+  display: none;
+}
+
+#check__menu {
+  display: none;
 }
 
 /* Main */
-
 main {
-  font-family: "Quicksand", sans-serif;
+  margin-top: 200px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  z-index: 5;
 }
 
 main .mensaje {
@@ -57,18 +129,6 @@ main .mensaje {
   display: flex;
   padding: 20px;
   justify-content: center;
-  font-family: cursive;
-  font-size: 30px;
-}
-
-main .mensaje2 {
-  color: rgb(255, 255, 255);
-  text-shadow: 1px 1px 5px black;
-  position: absolute;
-  display: flex;
-  padding: 100px;
-  justify-content: center;
-  font-family: cursive;
   font-size: 20px;
 }
 
@@ -164,154 +224,731 @@ footer {
   height: 1px;
   background-color: #7a7a7a;
 }
-
-@media only screen and (min-width: 360px) {
-  .logo {
-    text-align: center;
-    font-size: 30px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+/* media 340px a 499px */
+@media only screen and (min-width: 340px) and (max-width: 499px) {
+  .search input {
+    display: none;
+  }
+  header {
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+  }
+  .header__superior {
+    padding: 8px;
   }
 
-  .menu {
+  .logo1 img {
+    width: 50px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    background-color: rgb(239, 132, 178);
+    position: fixed;
+    left: 0;
+    top: 136px;
     width: 100%;
+    height: 0px;
+    transition: all 300ms ease;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  nav ul li a:hover {
+    transform: scale(1);
+  }
+
+  #label__check {
+    display: block;
+  }
+
+  .icon__menu {
+    display: flex;
+  }
+
+  #check__menu:checked ~ nav ul {
+    height: 300px;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  main {
+    background-color: rgb(228, 174, 197);
+    margin-top: 130px;
+    width: 100%;
+    height: 50px;
+    z-index: 5;
+  }
+
+  main .mensaje {
+    color: black;
+    text-shadow: 1px 1px 5px black;
+    display: flex;
+    padding: 15px;
+    font-size: 18px;
+    justify-content: center;
+    font-family: sans-serif;
+    position: absolute;
+  }
+  .card {
+    margin: 5px;
+    padding: 10px;
+    height: 470px;
+    width: auto;
+  }
+  .card-title {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+  }
+  .card-text {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 15px;
+  }
+  .card-body1,
+  .card-body2,
+  .card-body3,
+  .card-body4 {
+    padding-top: 25px;
+  }
+}
+/* media 500px a 575px */
+@media only screen and (min-width: 500px) and (max-width: 575px) {
+  .search input {
+    display: none;
+  }
+  header {
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+  }
+  .header__superior {
+    padding: 8px;
+  }
+
+  .logo1 img {
+    width: 50px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    background-color: rgb(239, 132, 178);
+    position: fixed;
+    left: 0;
+    top: 136px;
+    width: 100%;
+    height: 0px;
+    transition: all 300ms ease;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  nav ul li a:hover {
+    transform: scale(1);
+  }
+
+  #label__check {
+    display: block;
+  }
+
+  .icon__menu {
+    display: flex;
+  }
+
+  #check__menu:checked ~ nav ul {
+    height: 300px;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  main {
+    background-color: rgb(228, 174, 197);
+    margin-top: 130px;
+    width: 100%;
+    height: 50px;
+    z-index: 5;
+  }
+
+  main .mensaje {
+    color: black;
+    text-shadow: 1px 1px 5px black;
+    display: flex;
+    padding: 15px;
+    font-size: 18px;
+    justify-content: center;
+    font-family: sans-serif;
+    position: absolute;
+  }
+  .card {
+    margin: 5px;
+    padding: 10px;
+    height: 525px;
+    width: auto;
+  }
+  .card-title {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+  }
+  .card-text {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+  }
+  .card-body1,
+  .card-body2,
+  .card-body3,
+  .card-body4 {
+    padding-top: 25px;
+  }
+}
+
+/* media 576px a 767px */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .search input {
+    display: block;
+  }
+  header {
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+  }
+  .header__superior {
+    padding: 8px;
+  }
+
+  .logo1 img {
+    width: 50px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    background-color: rgb(239, 132, 178);
+    position: fixed;
+    left: 0;
+    top: 136px;
+    width: 100%;
+    height: 0px;
+    transition: all 300ms ease;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  nav ul li a:hover {
+    transform: scale(1);
+  }
+
+  #label__check {
+    display: block;
+  }
+
+  .icon__menu {
+    display: flex;
+  }
+
+  #check__menu:checked ~ nav ul {
+    height: 300px;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  main {
+    background-color: rgb(228, 174, 197);
+    margin-top: 135px;
+    width: 100%;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 5;
+  }
+
+  main .mensaje {
+    color: black;
+    text-shadow: 1px 1px 5px black;
+    display: flex;
+    padding: 15px;
+    font-size: 25px;
+    justify-content: center;
+    font-family: sans-serif;
+  }
+  .card {
+    margin: 5px;
+    padding: 10px;
+    height: 620px;
+    width: auto;
+  }
+  .card-title {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+  }
+  .card-text {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+  }
+
+  .card-body1 {
+    padding-top: 10px;
+    font-size: 20px;
+  }
+
+  .card-body2 {
+    padding-top: 15px;
+  }
+
+  .card-body3 {
+    padding-top: 20px;
+  }
+
+  .card-body4 {
+    padding-top: 20px;
+  }
+}
+/* media 768px a 1000px */
+@media only screen and (min-width: 768px) and (max-width: 1000px) {
+  .search input {
+    display: block;
+  }
+  header {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgb(250, 217, 230);
+    z-index: 10;
+  }
+  .header__superior {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
     justify-content: space-between;
+    padding: 20px;
+  }
+  .logo1 img {
+    width: 90px;
+    padding-left: 10px;
+  }
+  .search input {
+    width: 330px;
+    padding: 10px;
+  }
+
+  /* -- menu navegador -- */
+  .container__menu {
+    width: 100%;
+    height: 70px;
+    background-color: rgb(240, 148, 188);
+    padding: 0px 20px;
+  }
+  .menu {
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+  }
+  #checkbox__menu {
+    display: none;
+  }
+  #label__check {
+    width: 26px;
+    height: 100%;
+    display: none;
+  }
+  .icon__menu {
+    font-size: 26px;
     color: white;
-    padding: 5px;
+    cursor: pointer;
+    width: 26px;
+    height: 100%;
+    display: none;
+    align-items: center;
   }
-  .container-fluid {
-    background-color: rgb(228, 174, 197);
-    height: auto;
+  nav {
+    height: 100%;
+  }
+  nav ul {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    opacity: 1;
+    visibility: visible;
+    flex-direction: row;
+    position: static;
+    background-color: rgb(240, 148, 188);
+  }
+  nav ul li {
+    height: 100%;
+    list-style: none;
+    position: relative;
+  }
+  nav ul li a {
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(3, 200px);
-    padding: 10px;
-    grid-gap: 10px;
+    height: 100%;
+    display: flex;
+    color: white;
+    align-items: center;
+    padding: 14px;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: all 300ms ease;
   }
-  .container-fluid .img {
-    border: solid rgba(0, 0, 0, 0.24) 1px;
-  }
-
-  .img1 {
-    background-image: url(img/dandelion-445228_1920.jpg);
-    background-size: cover;
-    background-position: center;
-  }
-
-  /* media 600px a 768px */
-
-  @media only screen and (min-width: 360px) and (min-width: 600px) and (max-width: 768px) {
-    .logo {
-      text-align: center;
-      color: red;
-      font-size: 30px;
-      font-family: "Quicksand", sans-serif;
-    }
-    .menu {
-      width: 100%;
-      text-align: center;
-      font-size: 17px;
-      justify-content: space-between;
-      color: rgb(255, 255, 255);
-      padding: 5px;
-    }
-  }
-
-  .container-fluid {
+  /* Main */
+  main {
     background-color: rgb(228, 174, 197);
-    height: auto;
+    margin-top: 190px;
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(1, 200px);
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 5;
+  }
+
+  main .mensaje {
+    color: black;
+    text-shadow: 1px 1px 5px black;
+    display: flex;
+    padding: 15px;
+    font-size: 25px;
+    justify-content: center;
+    font-family: sans-serif;
+  }
+  .card {
+    margin: 2px;
     padding: 10px;
-    grid-gap: 10px;
+    height: 490px;
+    width: auto;
+  }
+  .card-title {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 25px;
+    padding-top: 5px;
+  }
+  .card-text {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+  }
+  .card-img-top1 {
+    padding-top: 5px;
+  }
+  .card-body1 {
+    padding-top: 5px;
+  }
+  .card-img-top2 {
+    padding-top: 15px;
+  }
+  .card-body2 {
+    padding-top: 5px;
+  }
+  .card-img-top3 {
+    padding-top: 5px;
+  }
+  .card-body3 {
+    padding-top: 5px;
+  }
+  .card-img-top4 {
+    padding-top: 5px;
+  }
+  .card-body4 {
+    padding-top: 5px;
+  }
+}
+/* media 1001px a 1250px */
+@media only screen and (min-width: 1001px) and (max-width: 1250px) {
+  .search input {
+    display: block;
+  }
+  header {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgb(250, 217, 230);
+    z-index: 10;
+  }
+  .header__superior {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  .logo1 img {
+    width: 90px;
+    padding-left: 10px;
+  }
+  .search input {
+    width: 330px;
+    padding: 10px;
   }
 
-  .container-fluid .img {
-    border: solid rgba(0, 0, 0, 0.203) 1px;
+  /* -- menu navegador -- */
+  .container__menu {
+    width: 100%;
+    height: 70px;
+    background-color: rgb(240, 148, 188);
+    padding: 0px 20px;
+  }
+  .menu {
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+  }
+  #checkbox__menu {
+    display: none;
+  }
+  #label__check {
+    width: 26px;
+    height: 100%;
+    display: none;
+  }
+  .icon__menu {
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+    width: 26px;
+    height: 100%;
+    display: none;
+    align-items: center;
+  }
+  nav {
+    height: 100%;
+  }
+  nav ul {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    opacity: 1;
+    visibility: visible;
+    flex-direction: row;
+    position: static;
+    background-color: rgb(240, 148, 188);
+  }
+  nav ul li {
+    height: 100%;
+    list-style: none;
+    position: relative;
+  }
+  nav ul li a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    color: white;
+    align-items: center;
+    padding: 14px;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: all 300ms ease;
+  }
+  /* Main */
+  main {
+    background-color: rgb(228, 174, 197);
+    margin-top: 190px;
+    width: 100%;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 5;
   }
 
-  .img1 {
-    background-image: url(img/dandelion-445228_1920.jpg);
-    background-size: cover;
-    background-position: center;
+  main .mensaje {
+    color: black;
+    text-shadow: 1px 1px 5px black;
+    display: flex;
+    padding: 15px;
+    font-size: 25px;
+    justify-content: center;
+    font-family: sans-serif;
+  }
+  .card {
+    margin: 2px;
+    padding: 10px;
+    height: 555px;
+    width: auto;
+  }
+  .card-title {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 25px;
+    padding-top: 5px;
+  }
+  .card-text {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+  }
+  .card-img-top1 {
+    padding-top: 5px;
+  }
+  .card-body1 {
+    padding-top: 5px;
+  }
+  .card-img-top2 {
+    padding-top: 15px;
+  }
+  .card-body2 {
+    padding-top: 5px;
+  }
+  .card-img-top3 {
+    padding-top: 5px;
+  }
+  .card-body3 {
+    padding-top: 5px;
+  }
+  .card-img-top4 {
+    padding-top: 5px;
+  }
+  .card-body4 {
+    padding-top: 5px;
+  }
+}
+/* media de 1251 en adelante */
+@media only screen and (min-width: 1251px) {
+  .search input {
+    display: block;
+  }
+  header {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgb(250, 217, 230);
+    z-index: 10;
+  }
+  .header__superior {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  .logo1 img {
+    width: 90px;
+    padding-left: 10px;
+  }
+  .search input {
+    width: 330px;
+    padding: 10px;
   }
 
-  /* media 768 en adelante */
+  /* -- menu navegador -- */
+  .container__menu {
+    width: 100%;
+    height: 70px;
+    background-color: rgb(240, 148, 188);
+    padding: 0px 20px;
+  }
+  .menu {
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+  }
+  #checkbox__menu {
+    display: none;
+  }
+  #label__check {
+    width: 26px;
+    height: 100%;
+    display: none;
+  }
+  .icon__menu {
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+    width: 26px;
+    height: 100%;
+    display: none;
+    align-items: center;
+  }
+  nav {
+    height: 100%;
+  }
+  nav ul {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    opacity: 1;
+    visibility: visible;
+    flex-direction: row;
+    position: static;
+    background-color: rgb(240, 148, 188);
+  }
+  nav ul li {
+    height: 100%;
+    list-style: none;
+    position: relative;
+  }
+  nav ul li a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    color: white;
+    align-items: center;
+    padding: 14px;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: all 300ms ease;
+  }
+  /* Main */
+  main {
+    background-color: rgb(228, 174, 197);
+    margin-top: 190px;
+    width: 100%;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 5;
+  }
 
-  @media only screen and (min-width: 768px) {
-    header {
-      background-color: rgb(250, 217, 230);
-      width: 100%;
-      height: 130px;
-      opacity: 0.9;
-    }
-    header .logo {
-      text-align: left;
-      font-size: 40px;
-      font-family: "Quicksand", sans-serif;
-    }
-    /* -- menu navegador -- */
-
-    .navbar-center {
-      position: absolute;
-      left: 44%;
-      transform: translatex(-50%);
-      padding: 5px;
-    }
-    .navbar-nav {
-      display: flex;
-      flex-direction: column;
-      padding-left: auto;
-      margin-bottom: 0;
-      list-style: none;
-      font-size: 20px;
-    }
-    li {
-      display: inline;
-    }
-    .menu a {
-      outline: none;
-      text-decoration: none;
-      display: inline-flex;
-      text-align: center;
-      justify-content: center;
-      color: #14508f;
-    }
-    li:last-child a {
-      margin-right: 0;
-    }
-
-    /* Main */
-
-    main {
-      font-family: "Quicksand", sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-    }
-
-    .container-fluid {
-      background-color: rgb(228, 174, 197);
-      height: auto;
-      width: 100%;
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-      grid-template-rows: repeat(1, 500px);
-      padding: 10px;
-      grid-gap: 10px;
-    }
-
-    .img {
-      border: solid rgba(0, 0, 0, 0.203) 1px;;
-    }
-
-    .img1 {
-      background-image: url(img/dandelion-445228_1920.jpg);
-      background-size: cover;
-      background-position: center;
-    }
+  main .mensaje {
+    color: black;
+    text-shadow: 1px 1px 5px black;
+    display: flex;
+    padding: 15px;
+    font-size: 25px;
+    justify-content: center;
+    font-family: sans-serif;
+  }
+  .card {
+    margin: 2px;
+    padding: 10px;
+    height: 610px;
+    width: auto;
+  }
+  .card-title {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 28px;
+    padding-top: 5px;
+  }
+  .card-text {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+  }
+  .card-img-top1 {
+    padding-top: 5px;
+  }
+  .card-body1 {
+    padding-top: 5px;
+  }
+  .card-img-top2 {
+    padding-top: 15px;
+  }
+  .card-body2 {
+    padding-top: 5px;
+  }
+  .card-img-top3 {
+    padding-top: 5px;
+  }
+  .card-body3 {
+    padding-top: 5px;
+  }
+  .card-img-top4 {
+    padding-top: 5px;
+  }
+  .card-body4 {
+    padding-top: 5px;
   }
 }

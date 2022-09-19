@@ -1,53 +1,124 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   text-decoration: none;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
-/* header mobile + navegador */
+/* header */
+
 header {
+  width: 100%;
+  top: 0;
+  left: 0;
   background-color: rgb(250, 217, 230);
+  z-index: 10;
+  position: absolute;
+}
+
+/* Header superior */
+
+.header__superior {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.logo1 img {
+  width: 90px;
+}
+
+.search input {
+  width: 300px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* barra menu */
+
+.container__menu {
   width: 100%;
-  height: 100px;
-  font-family: "Quicksand", sans-serif;
-  opacity: 0.9;
+  height: 70px;
+  background-color: rgb(240, 148, 188);
+  padding: 0px 20px;
 }
 
-.navbar-logo {
-  display: inline-block;
-  vertical-align: middle;
-  width: 100px;
+.menu {
+  max-width: 1200px;
+  margin: auto;
+  height: 100%;
 }
 
-.navbar-logo img {
-  display: block;
+nav {
+  height: 100%;
+}
+
+nav ul {
+  height: 100%;
+  display: flex;
+}
+
+nav ul li {
+  height: 100%;
+  list-style: none;
+  position: relative;
+}
+
+nav ul li a {
   width: 100%;
-  height: auto;
+  height: 100%;
+  display: flex;
+  color: white;
+  align-items: center;
+  padding: 14px;
+  text-transform: uppercase;
+  font-size: 14px;
+  transition: all 300ms ease;
 }
 
-header .logo {
-  text-align: center;
-  font-size: 30px;
-  font-family: "Quicksand", sans-serif;
+nav ul li a:hover {
+  text-decoration: none;
+  color: white;
+  transform: scale(1.1);
+  background: rgb(239, 132, 178);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
-header li {
-  font-family: "Quicksand", sans-serif;
-  display: inline;
+
+/* elementos responsive */
+
+.icon__menu {
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+  width: 26px;
+  height: 100%;
+  display: none;
+  align-items: center;
 }
-header li:last-child a {
-  font-family: "Quicksand", sans-serif;
-  margin-right: 0;
+
+#label__check {
+  width: 26px;
+  height: 100%;
+  display: none;
+}
+
+#check__menu {
+  display: none;
 }
 
 /* Main */
-
 main {
-  font-family: "Quicksand", sans-serif;
+  margin-top: 200px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  z-index: 5;
 }
 
 main .mensaje {
@@ -57,41 +128,85 @@ main .mensaje {
   display: flex;
   padding: 20px;
   justify-content: center;
-  font-family: cursive;
-  font-size: 30px;
-}
-
-main .mensaje2 {
-  color: rgb(255, 255, 255);
-  text-shadow: 1px 1px 5px black;
-  position: absolute;
-  display: flex;
-  padding: 100px;
-  justify-content: center;
-  font-family: cursive;
   font-size: 20px;
 }
 
-.container-fluid {
-  background-color: rgb(228, 174, 197);
+/* Inicio galeria */
+
+
+.galeria {
+  background-color: rgb(250, 217, 230);
   height: auto;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(1, 200px);
+  grid-template-rows: repeat(8, 200px);
   padding: 10px;
   grid-gap: 10px;
 }
 
-.img {
-  border: solid rgba(0, 0, 0, 0.29) 1px;
+.item {
+  border-radius: 5px;
+  border: solid black 1px;
+  filter: grayscale(100%);
+  transition: all 0.7s;
 }
 
-.img1 {
-  background-image: url(img/dandelion-445228_1920.jpg);
-  background-size: cover;
-  background-position: center;
+.item:hover {
+  transform: scale(1.05);
+  filter: grayscale(0%);
+  transition: all 0.7s;
 }
+
+.item1 {
+  background-image: url(/img/plataformas.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.item2 {
+  background-image: url(/img/gatoduerme.jpg);
+  background-position: bottom;
+  background-size: cover;
+}
+
+.item3 {
+  background-image: url(/img/gatopatio.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.item4 {
+  background-image: url(/img/hotel2.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.item5 {
+  background-image: url(/img/hotel_felino.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.item6 {
+  background-image: url(/img/salagatos.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.item7 {
+  background-image: url(/img/hotel_felino2.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.item8 {
+  background-image: url(/img/hotel-felino5.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+/* Fin galeria */
 
 /* inicio de footer */
 
@@ -165,19 +280,73 @@ footer {
   background-color: #7a7a7a;
 }
 
-@media only screen and (min-width: 360px) {
-  .logo {
-    text-align: center;
-    font-size: 30px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+/* media 340px a 575px */
+@media only screen and (min-width: 340px) and (max-width: 575px) {
+  .search input {
+    display: none;
+  }
+  header {
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+  }
+  .header__superior {
+    padding: 8px;
   }
 
-  .menu {
+  .logo1 img {
+    width: 50px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    background-color: rgb(239, 132, 178);
+    position: fixed;
+    left: 0;
+    top: 136px;
     width: 100%;
-    font-size: 15px;
-    justify-content: space-between;
-    color: white;
-    padding: 5px;
+    height: 0px;
+    transition: all 300ms ease;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  nav ul li a:hover {
+    transform: scale(1);
+  }
+
+  #label__check {
+    display: block;
+  }
+
+  .icon__menu {
+    display: flex;
+  }
+
+  #check__menu:checked ~ nav ul {
+    height: 300px;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  main {
+    background-color: rgb(228, 174, 197);
+    margin-top: 130px;
+    width: 100%;
+    height: 50px;
+    z-index: 5;
+  }
+
+  main .mensaje {
+    color: black;
+    text-shadow: 1px 1px 5px black;
+    display: flex;
+    padding: 15px;
+    font-size: 18px;
+    justify-content: center;
+    font-family: sans-serif;
+    position: absolute;
   }
   .container-fluid {
     background-color: rgb(228, 174, 197);
@@ -189,35 +358,82 @@ footer {
     padding: 10px;
     grid-gap: 10px;
   }
-  .container-fluid .img {
-    border: solid rgba(0, 0, 0, 0.24) 1px;
+  .galeria {
+    grid-template-columns: 1fr 1fr;
+    height: 860px;
+  }
+}
+/* media 576px a 767px */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .search input {
+    display: block;
+  }
+  header {
+    width: 100%;
+    z-index: 10;
+    position: absolute;
+  }
+  .header__superior {
+    padding: 8px;
   }
 
-  .img1 {
-    background-image: url(img/dandelion-445228_1920.jpg);
-    background-size: cover;
-    background-position: center;
+  .logo1 img {
+    width: 50px;
   }
 
-  /* media 600px a 768px */
-
-  @media only screen and (min-width: 360px) and (min-width: 600px) and (max-width: 768px) {
-    .logo {
-      text-align: center;
-      color: red;
-      font-size: 30px;
-      font-family: "Quicksand", sans-serif;
-    }
-    .menu {
-      width: 100%;
-      text-align: center;
-      font-size: 17px;
-      justify-content: space-between;
-      color: rgb(255, 255, 255);
-      padding: 5px;
-    }
+  nav ul {
+    flex-direction: column;
+    background-color: rgb(239, 132, 178);
+    position: fixed;
+    left: 0;
+    top: 136px;
+    width: 100%;
+    height: 0px;
+    transition: all 300ms ease;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
   }
 
+  nav ul li a:hover {
+    transform: scale(1);
+  }
+
+  #label__check {
+    display: block;
+  }
+
+  .icon__menu {
+    display: flex;
+  }
+
+  #check__menu:checked ~ nav ul {
+    height: 300px;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  /* Main */
+  main {
+    background-color: rgb(228, 174, 197);
+    margin-top: 136px;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 5;
+  }
+
+  main .mensaje {
+    color: black;
+    text-shadow: 1px 1px 5px black;
+    display: flex;
+    padding: 12px;
+    font-size: 25px;
+    justify-content: center;
+    font-family: sans-serif;
+  }
   .container-fluid {
     background-color: rgb(228, 174, 197);
     height: auto;
@@ -229,89 +445,184 @@ footer {
     grid-gap: 10px;
   }
 
-  .container-fluid .img {
-    border: solid rgba(0, 0, 0, 0.203) 1px;
+  .galeria {
+    grid-template-columns: repeat(3, 1fr);
+    height: 860px;
   }
-
-  .img1 {
-    background-image: url(img/dandelion-445228_1920.jpg);
-    background-size: cover;
-    background-position: center;
+  .item1 {
+    grid-column: 1/3;
+    grid-row: 1/2;
   }
-
-  /* media 768 en adelante */
-
-  @media only screen and (min-width: 768px) {
-    header {
-      background-color: rgb(250, 217, 230);
-      width: 100%;
-      height: 130px;
-      opacity: 0.9;
-    }
-    header .logo {
-      text-align: left;
-      font-size: 40px;
-      font-family: "Quicksand", sans-serif;
-    }
-    /* -- menu navegador -- */
-
-    .navbar-center {
-      position: absolute;
-      left: 44%;
-      transform: translatex(-50%);
-      padding: 5px;
-    }
-    .navbar-nav {
-      display: flex;
-      flex-direction: column;
-      padding-left: auto;
-      margin-bottom: 0;
-      list-style: none;
-      font-size: 20px;
-    }
-    li {
-      display: inline;
-    }
-    .menu a {
-      outline: none;
-      text-decoration: none;
-      display: inline-flex;
-      text-align: center;
-      justify-content: center;
-      color: #14508f;
-    }
-    li:last-child a {
-      margin-right: 0;
-    }
-
-    /* Main */
-
-    main {
-      font-family: "Quicksand", sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-    }
-
-    .container-fluid {
-      background-color: rgb(228, 174, 197);
-      height: auto;
-      width: 100%;
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-      grid-template-rows: repeat(1, 500px);
-      padding: 10px;
-      grid-gap: 10px;
-    }
-
-    .img {
-      border: solid rgba(0, 0, 0, 0.203) 1px;
-    }
-
-    .img1 {
-      background-image: url(img/dandelion-445228_1920.jpg);
-      background-size: cover;
-      background-position: center;
-    }
+  .item2 {
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+  .item3 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .item4 {
+    grid-column: 2/4;
+    grid-row: 2/3;
+  }
+  .item5 {
+    grid-column: 1/3;
+    grid-row: 3/4;
+  }
+  .item6 {
+    grid-column: 3/4;
+    grid-row: 3/4;
+  }
+  .item7 {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+  .item8 {
+    grid-column: 2/4;
+    grid-row: 4/5;
   }
 }
+/* media 768px */
+@media only screen and (min-width: 768px)  {
+  .search input {
+    display: block;
+  }
+  header {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgb(250, 217, 230);
+    z-index: 10;
+  }
+  .header__superior {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  .logo1 img {
+    width: 90px;
+    padding-left: 10px;
+  }
+  .search input {
+    width: 330px;
+    padding: 10px;
+  }
+
+  /* -- menu navegador -- */
+  .container__menu {
+    width: 100%;
+    height: 70px;
+    background-color: rgb(240, 148, 188);
+    padding: 0px 20px;
+  }
+  .menu {
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+  }
+  #checkbox__menu {
+    display: none;
+  }
+  #label__check {
+    width: 26px;
+    height: 100%;
+    display: none;
+  }
+  .icon__menu {
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+    width: 26px;
+    height: 100%;
+    display: none;
+    align-items: center;
+  }
+  nav {
+    height: 100%;
+  }
+  nav ul {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    opacity: 1;
+    visibility: visible;
+    flex-direction: row;
+    position: static;
+    background-color: rgb(240, 148, 188);
+  }
+  nav ul li {
+    height: 100%;
+    list-style: none;
+    position: relative;
+  }
+  nav ul li a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    color: white;
+    align-items: center;
+    padding: 14px;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: all 300ms ease;
+  }
+  /* Main */
+  main {
+    background-color: rgb(228, 174, 197);
+    margin-top: 190px;
+    width: 100%;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 5;
+  }
+
+  main .mensaje {
+    color: black;
+    text-shadow: 1px 1px 5px black;
+    display: flex;
+    padding: 15px;
+    font-size: 25px;
+    justify-content: center;
+    font-family: sans-serif;
+  }
+
+    .galeria {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 200px);
+      grid-template-areas:
+        "img1 img2 img3 img3"
+        "img1 img4 img5 img6"
+        "img7 img4 img8 img8";
+    }
+    .item1 {
+      grid-area: img1;
+    }
+    .item2 {
+      grid-area: img2;
+    }
+    .item3 {
+      grid-area: img3;
+    }
+    .item4 {
+      grid-area: img4;
+    }
+    .item5 {
+      grid-area: img5;
+    }
+    .item6 {
+      grid-area: img6;
+    }
+    .item7 {
+      grid-area: img7;
+    }
+    .item8 {
+      grid-area: img8;
+    }
+  }
+

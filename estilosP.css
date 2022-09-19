@@ -1,53 +1,124 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   text-decoration: none;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
-/* header mobile + navegador */
+/* header */
+
 header {
+  width: 100%;
+  top: 0;
+  left: 0;
   background-color: rgb(250, 217, 230);
+  z-index: 10;
+  position: absolute;
+}
+
+/* Header superior */
+
+.header__superior {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.logo1 img {
+  width: 90px;
+}
+
+.search input {
+  width: 300px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* barra menu */
+
+.container__menu {
   width: 100%;
-  height: 100px;
-  font-family: "Quicksand", sans-serif;
-  opacity: 0.9;
+  height: 70px;
+  background-color: rgb(240, 148, 188);
+  padding: 0px 20px;
 }
 
-.navbar-logo {
-  display: inline-block;
-  vertical-align: middle;
-  width: 100px;
+.menu {
+  max-width: 1200px;
+  margin: auto;
+  height: 100%;
 }
 
-.navbar-logo img {
-  display: block;
+nav {
+  height: 100%;
+}
+
+nav ul {
+  height: 100%;
+  display: flex;
+}
+
+nav ul li {
+  height: 100%;
+  list-style: none;
+  position: relative;
+}
+
+nav ul li a {
   width: 100%;
-  height: auto;
+  height: 100%;
+  display: flex;
+  color: white;
+  align-items: center;
+  padding: 14px;
+  text-transform: uppercase;
+  font-size: 14px;
+  transition: all 300ms ease;
 }
 
-header .logo {
-  text-align: center;
-  font-size: 30px;
-  font-family: "Quicksand", sans-serif;
+nav ul li a:hover {
+  text-decoration: none;
+  color: white;
+  transform: scale(1.1);
+  background: rgb(239, 132, 178);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
-header li {
-  font-family: "Quicksand", sans-serif;
-  display: inline;
+
+/* elementos responsive */
+
+.icon__menu {
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+  width: 26px;
+  height: 100%;
+  display: none;
+  align-items: center;
 }
-header li:last-child a {
-  font-family: "Quicksand", sans-serif;
-  margin-right: 0;
+
+#label__check {
+  width: 26px;
+  height: 100%;
+  display: none;
+}
+
+#check__menu {
+  display: none;
 }
 
 /* Main */
-
 main {
-  font-family: "Quicksand", sans-serif;
+  margin-top: 200px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  z-index: 5;
 }
 
 main .mensaje {
@@ -57,40 +128,7 @@ main .mensaje {
   display: flex;
   padding: 20px;
   justify-content: center;
-  font-family: cursive;
-  font-size: 30px;
-}
-
-main .mensaje2 {
-  color: rgb(255, 255, 255);
-  text-shadow: 1px 1px 5px black;
-  position: absolute;
-  display: flex;
-  padding: 100px;
-  justify-content: center;
-  font-family: cursive;
   font-size: 20px;
-}
-
-.container-fluid {
-  background-color: rgb(228, 174, 197);
-  height: auto;
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(1, 200px);
-  padding: 10px;
-  grid-gap: 10px;
-}
-
-.img {
-  border: solid rgba(0, 0, 0, 0.29) 1px;
-}
-
-.img1 {
-  background-image: url(img/lake-1802337_1920.jpg);
-  background-size: cover;
-  background-position: center;
 }
 
 /* inicio de footer */
@@ -164,20 +202,73 @@ footer {
   height: 1px;
   background-color: #7a7a7a;
 }
-
-@media only screen and (min-width: 360px) {
-  .logo {
-    text-align: center;
-    font-size: 30px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+/* media 340px a 575px */
+@media only screen and (min-width: 340px) and (max-width: 575px) {
+  .search input {
+    display: none;
+  }
+  header {
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+  }
+  .header__superior {
+    padding: 8px;
   }
 
-  .menu {
+  .logo1 img {
+    width: 50px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    background-color: rgb(239, 132, 178);
+    position: fixed;
+    left: 0;
+    top: 136px;
     width: 100%;
-    font-size: 15px;
-    justify-content: space-between;
-    color: white;
-    padding: 5px;
+    height: 0px;
+    transition: all 300ms ease;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  nav ul li a:hover {
+    transform: scale(1);
+  }
+
+  #label__check {
+    display: block;
+  }
+
+  .icon__menu {
+    display: flex;
+  }
+
+  #check__menu:checked ~ nav ul {
+    height: 300px;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  main {
+    background-color: rgb(228, 174, 197);
+    margin-top: 130px;
+    width: 100%;
+    height: 50px;
+    z-index: 5;
+  }
+
+  main .mensaje {
+    color: black;
+    text-shadow: 1px 1px 5px black;
+    display: flex;
+    padding: 15px;
+    font-size: 18px;
+    justify-content: center;
+    font-family: sans-serif;
+    position: absolute;
   }
   .container-fluid {
     background-color: rgb(228, 174, 197);
@@ -185,9 +276,8 @@ footer {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(3, 200px);
+    grid-template-rows: repeat(1, 300px);
     padding: 10px;
-    grid-gap: 10px;
   }
   .container-fluid .img {
     border: solid rgba(0, 0, 0, 0.24) 1px;
@@ -199,25 +289,183 @@ footer {
     background-position: center;
   }
 
-  /* media 600px a 768px */
+  .card {
+    padding: 20px;
+  }
+  .card-title {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+  }
+  .card-text {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+  }
+  .card-body1 {
+    padding-top: 50px;
+  }
+  .card-body2 {
+    padding-top: 50px;
+  }
+  .card-body3 {
+    padding-top: 50px;
+  }
+  .card-body4 {
+    padding-top: 50px;
+  }
+  .card-body5 {
+    padding-top: 50px;
+  }
+  .card-body6 {
+    padding-top: 50px;
+  }
+  .card-body7 {
+    padding-top: 50px;
+  }
+  .card-body8 {
+    padding-top: 50px;
+  }
+  .card-body9 {
+    padding-top: 50px;
+  }
+}
 
-  @media only screen and (min-width: 360px) and (min-width: 600px) and (max-width: 768px) {
-    .logo {
-      text-align: center;
-      color: red;
-      font-size: 30px;
-      font-family: "Quicksand", sans-serif;
-    }
-    .menu {
-      width: 100%;
-      text-align: center;
-      font-size: 17px;
-      justify-content: space-between;
-      color: rgb(255, 255, 255);
-      padding: 5px;
-    }
+/* media 576px a 767px */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .search input {
+    display: block;
+  }
+  header {
+    width: 100%;
+    z-index: 10;
+    position: absolute;
+  }
+  .header__superior {
+    padding: 8px;
   }
 
+  .logo1 img {
+    width: 50px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    background-color: rgb(239, 132, 178);
+    position: fixed;
+    left: 0;
+    top: 136px;
+    width: 100%;
+    height: 0px;
+    transition: all 300ms ease;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  nav ul li a:hover {
+    transform: scale(1);
+  }
+
+  #label__check {
+    display: block;
+  }
+
+  .icon__menu {
+    display: flex;
+  }
+
+  #check__menu:checked ~ nav ul {
+    height: 300px;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  /* Main */
+  main {
+    background-color: rgb(228, 174, 197);
+    margin-top: 136px;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 5;
+  }
+
+  main .mensaje {
+    color: black;
+    text-shadow: 1px 1px 5px black;
+    display: flex;
+    padding: 12px;
+    font-size: 25px;
+    justify-content: center;
+    font-family: sans-serif;
+  }
+  .card {
+    margin: 2px;
+    padding: 20px;
+    height: 560px;
+    width: auto;
+  }
+  .card-title {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+  }
+  .card-text {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+  }
+  .card-img-top {
+    padding-top: 50px;
+  }
+  .card-body1 {
+    padding-top: 75px;
+  }
+  .card-img-top2 {
+    padding-top: 89px;
+  }
+  .card-body2 {
+    padding-top: 115px;
+  }
+  .card-img-top3 {
+    padding-top: 100px;
+  }
+  .card-body3 {
+    padding-top: 130px;
+  }
+  .card-img-top4 {
+    padding-top: 1px;
+  }
+  .card-body4 {
+    padding-top: 80px;
+  }
+  .card-img-top5 {
+    padding-top: 60px;
+  }
+  .card-body5 {
+    padding-top: 94px;
+  }
+  .card-body6 {
+    padding-top: 85px;
+  }
+  .card-body7 {
+    padding-top: 75px;
+  }
+  .card-img-top8 {
+    padding-top: 10px;
+  }
+  .card-body8 {
+    padding-top: 65px;
+  }
+  .card-img-top9 {
+    padding-top: 45px;
+  }
+  .card-body9 {
+    padding-top: 55px;
+  }
   .container-fluid {
     background-color: rgb(228, 174, 197);
     height: auto;
@@ -238,80 +486,389 @@ footer {
     background-size: cover;
     background-position: center;
   }
+}
+/* media 768px a 1200px */
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .search input {
+    display: block;
+  }
+  header {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgb(250, 217, 230);
+    z-index: 10;
+  }
+  .header__superior {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  .logo1 img {
+    width: 90px;
+    padding-left: 10px;
+  }
+  .search input {
+    width: 330px;
+    padding: 10px;
+  }
 
-  /* media 768 en adelante */
+  /* -- menu navegador -- */
+  .container__menu {
+    width: 100%;
+    height: 70px;
+    background-color: rgb(240, 148, 188);
+    padding: 0px 20px;
+  }
+  .menu {
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+  }
+  #checkbox__menu {
+    display: none;
+  }
+  #label__check {
+    width: 26px;
+    height: 100%;
+    display: none;
+  }
+  .icon__menu {
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+    width: 26px;
+    height: 100%;
+    display: none;
+    align-items: center;
+  }
+  nav {
+    height: 100%;
+  }
+  nav ul {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    opacity: 1;
+    visibility: visible;
+    flex-direction: row;
+    position: static;
+    background-color: rgb(240, 148, 188);
+  }
+  nav ul li {
+    height: 100%;
+    list-style: none;
+    position: relative;
+  }
+  nav ul li a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    color: white;
+    align-items: center;
+    padding: 14px;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: all 300ms ease;
+  }
+  /* Main */
+  main {
+    background-color: rgb(228, 174, 197);
+    margin-top: 190px;
+    width: 100%;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 5;
+  }
 
-  @media only screen and (min-width: 768px) {
-    header {
-      background-color: rgb(250, 217, 230);
-      width: 100%;
-      height: 130px;
-      opacity: 0.9;
-    }
-    header .logo {
-      text-align: left;
-      font-size: 40px;
-      font-family: "Quicksand", sans-serif;
-    }
-    /* -- menu navegador -- */
+  main .mensaje {
+    color: black;
+    text-shadow: 1px 1px 5px black;
+    display: flex;
+    padding: 15px;
+    font-size: 25px;
+    justify-content: center;
+    font-family: sans-serif;
+  }
+  .card {
+    margin: 2px;
+    padding: 20px;
+    height: 560px;
+    width: auto;
+  }
+  .card-title {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+  }
+  .card-text {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+  }
+  .card-img-top {
+    padding-top: 35px;
+  }
+  .card-body1 {
+    padding-top: 50px;
+  }
+  .card-img-top2 {
+    padding-top: 89px;
+  }
+  .card-body2 {
+    padding-top: 105px;
+  }
+  .card-img-top3 {
+    padding-top: 100px;
+  }
+  .card-body3 {
+    padding-top: 135px;
+  }
+  .card-img-top4 {
+    padding-top: 10px;
+  }
+  .card-body4 {
+    padding-top: 45px;
+  }
+  .card-img-top5 {
+    padding-top: 100px;
+  }
+  .card-body5 {
+    padding-top: 65px;
+  }
+  .card-body6 {
+    padding-top: 55px;
+  }
+  .card-body7 {
+    padding-top: 35px;
+  }
+  .card-img-top8 {
+    padding-top: 10px;
+  }
+  .card-body8 {
+    padding-top: 30px;
+  }
+  .card-img-top9 {
+    padding-top: 45px;
+  }
+  .card-body9 {
+    padding-top: 50px;
+  }
+  .container-fluid {
+    background-color: rgb(228, 174, 197);
+    height: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 500px);
+    padding: 10px;
+    grid-gap: 10px;
+  }
 
-    .navbar-center {
-      position: absolute;
-      left: 44%;
-      transform: translatex(-50%);
-      padding: 5px;
-    }
-    .navbar-nav {
-      display: flex;
-      flex-direction: column;
-      padding-left: auto;
-      margin-bottom: 0;
-      list-style: none;
-      font-size: 20px;
-    }
-    li {
-      display: inline;
-    }
-    .menu a {
-      outline: none;
-      text-decoration: none;
-      display: inline-flex;
-      text-align: center;
-      justify-content: center;
-      color: #14508f;
-    }
-    li:last-child a {
-      margin-right: 0;
-    }
+  .img {
+    border: solid black 2px;
+  }
 
-    /* Main */
+  .img1 {
+    background-image: url(img/lake-1802337_1920.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+}
+/* media 1201 en adelante */
+@media only screen and (min-width: 1201px) {
+  .search input {
+    display: block;
+  }
+  header {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgb(250, 217, 230);
+    z-index: 10;
+  }
+  .header__superior {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  .logo1 img {
+    width: 90px;
+    padding-left: 10px;
+  }
+  .search input {
+    width: 330px;
+    padding: 10px;
+  }
 
-    main {
-      font-family: "Quicksand", sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-    }
+  /* -- menu navegador -- */
+  .container__menu {
+    width: 100%;
+    height: 70px;
+    background-color: rgb(240, 148, 188);
+    padding: 0px 20px;
+  }
+  .menu {
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+  }
+  #checkbox__menu {
+    display: none;
+  }
+  #label__check {
+    width: 26px;
+    height: 100%;
+    display: none;
+  }
+  .icon__menu {
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+    width: 26px;
+    height: 100%;
+    display: none;
+    align-items: center;
+  }
+  nav {
+    height: 100%;
+  }
+  nav ul {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    opacity: 1;
+    visibility: visible;
+    flex-direction: row;
+    position: static;
+    background-color: rgb(240, 148, 188);
+  }
+  nav ul li {
+    height: 100%;
+    list-style: none;
+    position: relative;
+  }
+  nav ul li a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    color: white;
+    align-items: center;
+    padding: 14px;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: all 300ms ease;
+  }
+  /* Main */
+  main {
+    background-color: rgb(228, 174, 197);
+    margin-top: 190px;
+    width: 100%;
+    height: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 5;
+  }
 
-    .container-fluid {
-      background-color: rgb(228, 174, 197);
-      height: auto;
-      width: 100%;
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-      grid-template-rows: repeat(1, 500px);
-      padding: 10px;
-      grid-gap: 10px;
-    }
+  main .mensaje {
+    color: black;
+    text-shadow: 1px 1px 5px black;
+    display: flex;
+    padding: 20px;
+    font-size: 30px;
+    justify-content: center;
+    font-family: sans-serif;
+  }
+  .card {
+    margin: 2px;
+    padding: 20px;
+    height: 575px;
+    width: auto;
+  }
+  .card-title {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+  }
+  .card-text {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+  }
+  .card-body1 {
+    padding-top: 42px;
+  }
+  .card-img-top2 {
+    padding-top: 89px;
+  }
+  .card-body2 {
+    padding-top: 115px;
+  }
+  .card-img-top3 {
+    padding-top: 100px;
+  }
+  .card-body3 {
+    padding-top: 150px;
+  }
+  .card-img-top4 {
+    padding-top: 1px;
+  }
+  .card-body4 {
+    padding-top: 40px;
+  }
+  .card-img-top5 {
+    padding-top: 100px;
+  }
+  .card-body5 {
+    padding-top: 94px;
+  }
+  .card-body6 {
+    padding-top: 35px;
+  }
+  .card-body7 {
+    padding-top: 35px;
+  }
+  .card-img-top8 {
+    padding-top: 10px;
+  }
+  .card-body8 {
+    padding-top: 30px;
+  }
+  .card-img-top9 {
+    padding-top: 45px;
+  }
+  .card-body9 {
+    padding-top: 65px;
+  }
+  .container-fluid {
+    background-color: rgb(228, 174, 197);
+    height: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 500px);
+    padding: 10px;
+    grid-gap: 10px;
+  }
 
-    .img {
-      border: solid black 2px;
-    }
+  .img {
+    border: solid black 2px;
+  }
 
-    .img1 {
-      background-image: url(img/lake-1802337_1920.jpg);
-      background-size: cover;
-      background-position: center;
-    }
+  .img1 {
+    background-image: url(img/lake-1802337_1920.jpg);
+    background-size: cover;
+    background-position: center;
   }
 }
