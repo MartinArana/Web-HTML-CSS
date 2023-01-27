@@ -204,6 +204,7 @@ footer {
 }
 
 .box_footer a .fab {
+  padding-right: 5px;
   font-size: 20px;
 }
 
